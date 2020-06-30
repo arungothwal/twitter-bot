@@ -2,7 +2,7 @@ astroid==2.2.5
 certifi==2020.6.20
 chardet==3.0.4
 colorama==0.4.1
-Django==2.2.4
+Django==2.2.13
 django-rest-auth==0.9.5
 djangorestframework==3.10.3
 gunicorn==19.9.0
