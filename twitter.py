@@ -53,9 +53,3 @@ def chatbot():
 n=chatbot()
 print(n)
 
-# def get_followers():
-#     for user in tweepy.Cursor(api.followers, screen_name="@arun8447770255").items():
-#         print (user.screen_name)
-#         print(len(user.id))
-#
-# print(get_followers())
