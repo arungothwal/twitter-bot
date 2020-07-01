@@ -3,18 +3,19 @@ import time
 
 # 1st step to add  Consumer API's Key and Secret to able to get twitter data
 
-auth = tweepy.OAuthHandler('********************','******************************')
+auth = tweepy.OAuthHandler('kl5Ehf39JCpFfkSV7VHni2fi6','rbIosuLhFi2mCdB8YUhJC6TILcCoGWGg7MjyFHLx5xBBOb6rpd')
 
 # 2nd step to access token Key and Secret
 # 
-secret=auth.set_access_token('*******************','**************************')
+secret=auth.set_access_token('4255368433-sc0Ir8bv8JE9NCezeSSAJxOpG6fEQsQcczsohGJ','ktHfXQhc7RQJINUkSWjoEohgftzladhSw2eQQfrO7WM7q')
 
 
 api = tweepy.API(auth,wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
 
-def chatbot():
+'''Function to like recent posts of entered username and entered #tag'''
+def twitter_bot():
     user_name = input('Enter Username or Hashtag string only: ')
-    if user_name[0] == '@':
+    if user_name[0].isalpha() or user_name[0] == '@':
         # check username if exist then likes his posts
 
         try:
@@ -47,9 +48,8 @@ def chatbot():
                 print(e.reason)
             except StopIteration:
                 break
-    else:
-        return 'please enter username or hashtags only'
 
-n=chatbot()
+
+n=twitter_bot()
 print(n)
 
