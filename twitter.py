@@ -65,11 +65,14 @@ class Twitter_Bot_Func:
         followers_list = []
         no_of_tweets = 4
 
+        '''use  loop to store the screen_name of followers'''
         for follower in tweepy.Cursor(api.followers,screen_name=user_name).items():
             followers_list.append(follower.screen_name)
 
+        '''use loop to get single follower name '''
         for screen_names in followers_list:
 
+            '''use loop to get single follower recent n no. of posts '''
             for tweet in tweepy.Cursor(api.user_timeline, screen_name=screen_names, tweet_mode="extended").items(no_of_tweets):
                 try:
                     print('tweet liked')
